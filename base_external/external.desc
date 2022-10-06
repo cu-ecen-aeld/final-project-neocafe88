@@ -1,0 +1,2 @@
+name: project_base
+description: name of this br2-external tree ($BR2_EXTERNAL_project_base_PATH)
