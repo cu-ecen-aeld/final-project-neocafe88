@@ -1,0 +1,28 @@
+#!/bin/sh
+
+case $1 in
+	start)
+		echo ">>> Loading faulty modules...."
+		module_load faulty
+
+		echo ">>> Loading scull modules...."
+		scull_load
+
+		echo ">>> Loading hello"
+		modprobe hello.ko
+
+		echo ">>> Kernel modules loaded"
+		;;
+	stop)
+		rmmod hello.ko
+		scull_unload
+		module_unload faulty
+
+		echo ">> Kernel modules unloaded"
+		;;
+	*)
+		echo "Usage: $0 {start|stop}"
+	exit 1
+esac
+
+exit 0
