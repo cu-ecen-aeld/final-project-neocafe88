@@ -11,9 +11,13 @@ case $1 in
 		echo ">>> Loading hello"
 		modprobe hello.ko
 
+		echo ">>> loading AESDCHAR...ttt"
+		aesdchar_load
+
 		echo ">>> Kernel modules loaded"
 		;;
 	stop)
+		aesdchar_unload
 		rmmod hello.ko
 		scull_unload
 		module_unload faulty
