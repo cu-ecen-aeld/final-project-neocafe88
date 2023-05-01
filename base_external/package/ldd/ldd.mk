@@ -20,23 +20,3 @@ LDD_MODULE_SUBDIRS += scull
 
 $(eval $(kernel-module))
 $(eval $(generic-package))
-
-
-#LDD_MODULE_SUBDIRS = misc-modules
-#LDD_MODULE_SUBDIRS += scull
-
-#LDD_MODULE_MAKE_OPTS = KVERSION=$(LINUX_VERSION_PROBED)
-
-define KERNEL_MODULE_BUILD_CMDS
-	$(MAKE) -C '$(@D)' LINUX_DIR='$(LINUX_DIR)' CC='$(TARGET_CC)' LD='$(TARGET_LD)' modules
-endef
-
-define LDD_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 $(@D)/scull/scull_load $(TARGET_DIR)/sbin
-	$(INSTALL) -m 0755 $(@D)/scull/scull_unload $(TARGET_DIR)/sbin
-	$(INSTALL) -m 0755 $(@D)/misc-modules/module_load $(TARGET_DIR)/sbin
-	$(INSTALL) -m 0755 $(@D)/misc-modules/module_unload $(TARGET_DIR)/sbin
-endef
-
-#$(eval $(kernel-module))
-#$(eval $(generic-package))
