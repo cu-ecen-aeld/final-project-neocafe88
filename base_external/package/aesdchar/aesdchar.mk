@@ -5,8 +5,7 @@
 #
 ##############################################################
 
-AESDCHAR_VERSION = 2c02354e1020bc246e05e02b15d3601c9d45916f
-
+AESDCHAR_VERSION = 8668b896a073c8be1e01f052668e1ef19a2b8c84
 
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
