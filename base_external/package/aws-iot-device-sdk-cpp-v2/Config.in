@@ -1,0 +1,4 @@
+config BR2_PACKAGE_AWS_IOT_DEVICE_SDK_CPP_V2
+	bool "aws-iot-device-sdk-cpp-v2"
+	help
+	  SDK for AWS IoT Core

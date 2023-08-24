@@ -1,0 +1,5 @@
+config BR2_PACKAGE_TEMP_SENSOR
+        bool "temp-sensor"
+        help
+          Reades temeperatures from a conntected to the sensor and
+	  publish them to AWS IoT Core.
