@@ -1,0 +1,4 @@
+config BR2_PACKAGE_TEMPDRIVER
+        bool "tempdriver"
+        help
+          TEMP driver modules for the final project

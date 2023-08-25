@@ -2,25 +2,17 @@
 
 case $1 in
 	start)
-		echo ">>> Loading faulty modules...."
-		module_load faulty
-
-		echo ">>> Loading scull modules...."
-		scull_load
-
-		echo ">>> Loading hello"
-		modprobe hello.ko
-
-		echo ">>> loading AESDCHAR...ttt"
+		echo ">>> loading AESDCHAR..."
 		aesdchar_load
+
+		echo ">>> loading TEMPDRIVER..."
+		tempdriver_load
 
 		echo ">>> Kernel modules loaded"
 		;;
 	stop)
+		tempdriver_unload
 		aesdchar_unload
-		rmmod hello.ko
-		scull_unload
-		module_unload faulty
 
 		echo ">> Kernel modules unloaded"
 		;;

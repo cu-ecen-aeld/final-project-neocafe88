@@ -1,7 +1,7 @@
 #!/bin/sh
-module=aesdchar
+module=tempdriver
 # Use the same name for the device as the name used for the module
-device=aesdchar
+device=tempdriver
 # Support read/write for owner and group, read only for everyone using 644
 mode="664"
 
